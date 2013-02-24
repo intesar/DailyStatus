@@ -12,19 +12,21 @@ mvn tomcat:run
 
 Playing with REST API's
 
-1. Create a account
-http://localhost:8080/DailyStandup/api/standup/
-POST
+You may need this chrome extension
+https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US
 
-response : 
+1. Create a account
+   http://localhost:8080/DailyStandup/api/standup/
+   Method: POST
+
 
 2. Get all my statuses
-  http://localhost:8080/DailyStandup/api/standup/<hashtag>
-  GET
+   http://localhost:8080/DailyStandup/api/standup/<hashtag>
+   Method : GET
 
 3. Add status
    http://localhost:8080/DailyStandup/api/standup/status
-   POST
+   Method : POST
    body : hashtag=486d80f1-b13e-4a96-8741-4a72dea5ddce&statuses=test3&statusDay=Sun Feb 24 2013 23:18:09 GMT-0800 (PST)
 
-   Run this api multiple times by chaning statusDay & statuses values
+   Run the 2 endpoint multiple times by chaning statusDay & statuses values
