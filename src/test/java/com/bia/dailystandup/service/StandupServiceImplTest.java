@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bia.dailystandup.service;
 
 import com.bia.dailystandup.entity.Standup;
@@ -20,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author mdshannan
+ * @author Intesar Mohammed <mdshannan@gmail.com>
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({

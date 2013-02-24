@@ -18,10 +18,11 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Intesar Mohammed <mdshannan@gmail.com>
  */
 @Service
-@Transactional
+@Transactional(readOnly = true)
 public class StandupServiceImpl implements StandupService {
 
     protected static final Logger logger = LoggerFactory.getLogger(StandupServiceImpl.class);
+    
     @Autowired
     protected StandupRepository standupRepository;
 
@@ -30,7 +31,9 @@ public class StandupServiceImpl implements StandupService {
         return standupRepository.findOne(hashtag);
     }
 
+    
     @Override
+    @Transactional
     public Standup create() {
         UUID uuid = UUID.randomUUID();
         Standup standup = new Standup();
@@ -41,6 +44,7 @@ public class StandupServiceImpl implements StandupService {
     }
 
     @Override
+    @Transactional
     public Standup addStatus(String hashtag, Date date, String status) {
         Standup standup = standupRepository.findOne(hashtag);
         DailyStatus dailyStatus = new DailyStatus();
@@ -53,7 +57,7 @@ public class StandupServiceImpl implements StandupService {
 
         dailyStatus.setStatusDay(calendar.getTime());
         dailyStatus.setStatuses(status);
-        
+
         standup.getDailyStatuses().remove(dailyStatus);
         standup.getDailyStatuses().add(dailyStatus);
 

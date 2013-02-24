@@ -3,8 +3,6 @@ package com.bia.dailystandup.entity;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;

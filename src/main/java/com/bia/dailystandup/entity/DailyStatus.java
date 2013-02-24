@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bia.dailystandup.entity;
 
 import java.io.Serializable;
@@ -14,7 +10,7 @@ import javax.persistence.TemporalType;
 
 /**
  *
- * @author mdshannan
+ * @author Intesar Mohammed <mdshannan@gmail.com>
  */
 @Embeddable
 public class DailyStatus implements Serializable {
@@ -22,7 +18,6 @@ public class DailyStatus implements Serializable {
     @Temporal(TemporalType.DATE)
     @Column(name = "statusDay")
     private Date statusDay;
-    //@ElementCollection
     @Lob
     @Column(length = 1024)
     private String statuses;

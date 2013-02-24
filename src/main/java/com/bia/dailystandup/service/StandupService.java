@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bia.dailystandup.service;
 
 import com.bia.dailystandup.entity.Standup;
@@ -9,7 +5,7 @@ import java.util.Date;
 
 /**
  *
- * @author mdshannan
+ * @author Intesar Mohammed <mdshannan@gmail.com>
  */
 public interface StandupService {
 
